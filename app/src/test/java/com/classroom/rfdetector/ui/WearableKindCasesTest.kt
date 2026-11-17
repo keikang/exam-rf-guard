@@ -21,7 +21,7 @@ class WearableKindCasesTest {
         Case("이름을 지운 Meta 기기 — 안경이거나 Quest 헤드셋", ScanSource.BLE, null, setOf(0x01AB), emptySet(), candidate),
         Case("Meta Platforms Technologies 번호", ScanSource.BLE, null, setOf(0x058E), emptySet(), candidate),
         Case("이름 없는 Snap Spectacles", ScanSource.BLE, null, setOf(0x03C2), emptySet(), candidate),
-        Case("이름 없는 Jieli 칩 기기 — 값싼 카메라 안경", ScanSource.BLE, null, setOf(0x05D6), emptySet(), candidate),
+        Case("이름 없는 Jieli 칩 기기 — 값싼 이어폰이거나 카메라 안경", ScanSource.BLE, null, setOf(0x05D6), emptySet(), "무선 이어폰·스마트 안경 후보"),
         Case("이름 없는 Valve 기기 — 헤드셋 후보", ScanSource.BLE, null, setOf(0x055D), emptySet(), candidate),
         Case("Apple 번호와 Luxottica 번호를 같이 실은 신호", ScanSource.BLE, null, setOf(0x004C, 0x0D53), emptySet(), candidate),
         // 1단계: 이름이 그대로면 이름 규칙이 먼저다

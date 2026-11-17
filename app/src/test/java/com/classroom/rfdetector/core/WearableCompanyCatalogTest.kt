@@ -43,6 +43,10 @@ class WearableCompanyCatalogTest {
         WearableCompanyCatalog.entries.forEach { assertTrue("${hex(it.id)}: 찾으려는 제품이 비어 있습니다", it.products.isNotBlank()) }
     }
 
+    @Test fun everyTitleSaysCandidate() {
+        WearableCompanyCatalog.entries.forEach { assertTrue("${hex(it.id)}: 제목 \"${it.label}\"이 \"후보\"로 끝나지 않습니다", it.label.endsWith("후보")) }
+    }
+
     /**
      * 목록은 화면에 붙이는 이름만 바꾸고 전파를 묶고 세는 기준은 바꾸지 않는다.
      * 목록에 있는 번호마다, 목록에 없는 번호(0x0D54)와 똑같이 묶이고 똑같이 세는지 본다.

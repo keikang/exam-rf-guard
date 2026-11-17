@@ -393,7 +393,7 @@ internal fun plainKind(source: ScanSource, address: String, name: String, hints:
         wearable?.kind == WearableKind.SMART_GLASSES -> "스마트 안경" to RfSymbol.GLASSES
         wearable?.kind == WearableKind.SMARTWATCH -> "스마트워치" to RfSymbol.WATCH
         wearable?.kind == WearableKind.CAMERA -> "카메라" to RfSymbol.CAMERA
-        hint == null && company != null -> WearableCompanyCatalog.LABEL to RfSymbol.GLASSES
+        hint == null && company != null -> company.label to RfSymbol.GLASSES
         hint == null -> "블루투스 기기 · 종류 모름" to RfSymbol.BLUETOOTH
         hint == SignalHint.GLASSES -> hint.label to RfSymbol.GLASSES
         hint == SignalHint.WATCH -> hint.label to RfSymbol.WATCH
